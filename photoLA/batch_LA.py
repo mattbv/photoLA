@@ -17,6 +17,19 @@ import pandas as pd
 
 def run_cmd():
 
+    # Initializing parser.
+    parser = argparse.ArgumentParser(description='Batch run photoLA over all\
+ images inside a given folder.')
+
+    # Addind all required arguments.
+    parser.add_argument('-f', '--folder', dest='folder', help='Images folder')
+    parser.add_argument('-r', '--area_ref', dest='area_ref', help='Reference\
+ area.')
+    parser.add_argument('-o', '--output_folder', dest='out_folder',
+                        help='Folder to save the results.')
+    # Parsing arguments into variable args.
+    args = parser.parse_args()
+
     # Parsing arguments inputed in the command prompt/terminal.
     folder = args.folder
     area_ref = float(args.area_ref)
@@ -66,19 +79,6 @@ def run_cmd():
 
 
 if __name__ == "__main__":
-
-    # Initializing parser.
-    parser = argparse.ArgumentParser(description='Batch run photoLA over all\
- images inside a given folder.')
-
-    # Addind all required arguments.
-    parser.add_argument('-f', '--folder', dest='folder', help='Images folder')
-    parser.add_argument('-r', '--area_ref', dest='area_ref', help='Reference\
- area.')
-    parser.add_argument('-o', '--output_folder', dest='out_folder',
-                        help='Folder to save the results.')
-    # Parsing arguments into variable args.
-    args = parser.parse_args()
 
     # Running batch processing.
     run_cmd()

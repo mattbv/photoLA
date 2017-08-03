@@ -16,14 +16,14 @@ with open('requirements.txt') as f:
     required = f.read().splitlines()
 
 setup(
-    name="pyLeafArea",
-    version="1.0.0",
+    name="photoLA",
+    version="0.9.0",
     author='Matheus Boni Vicari',
     author_email='matheus.boni.vicari@gmail.com',
     packages=find_packages(),
     entry_points={
-        'console_scripts': ['photoLA_single=photoLA.single_LA',
-                            'photoLA_batch=photoLA.batch_LA']},
+        'console_scripts': ['photoLA_single=photoLA.single_LA:run_cmd',
+                            'photoLA_batch=photoLA.batch_LA:run_cmd']},
     url='https://github.com/mattbv/photoLA',
     license='LICENSE.txt',
     description='Estimates Leaf Area from photographs using a direct\
