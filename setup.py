@@ -17,7 +17,7 @@ with open('requirements.txt') as f:
 
 setup(
     name="photoLA",
-    version="0.9.0",
+    version="1.0.0",
     author='Matheus Boni Vicari',
     author_email='matheus.boni.vicari@gmail.com',
     packages=find_packages(),
